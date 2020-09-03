@@ -1,21 +1,13 @@
-// Need to define the logger interface.
-
 /*
- 
- type logger {
-   info(message, data = {})
-   debug(message, data = {})
-   error(message, data = {})
- }
- 
- */
 
-// THE SERVICE NEEDS THE REQUEST INFORMATION.
-// IT HAS TO BE.
+type logger {
+  info(message, data = {})
+  debug(message, data = {})
+  error(message, data = {})
+}
 
-// Providers need access to global state.
-// There needs to be a single global context as well.
-// It is accessible by everything and is the same accross requests.
+*/
+
 module.exports = (name, context) => {
   switch (name) {
     case "console":
