@@ -1,0 +1,14 @@
+{
+  "name": "jsctx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Karl Hepler <karl.hepler@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "LOG_DRIVER=console PORT=3000 node index.js"
+  }
+}
