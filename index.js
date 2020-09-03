@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 
 // Add log to request context
 app.use((req, res, next) => {
-  req.context.logger = createLogger(env.LOG_DRIVER, req.context);
+  req.context.logger = createLogger.bind(req.context)(env.LOG_DRIVER);
   next();
 });
 

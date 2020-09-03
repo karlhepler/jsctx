@@ -1,3 +1,5 @@
+const obj = require("../../lib/obj.js");
+
 /*
 
 type logger {
@@ -8,12 +10,11 @@ type logger {
 
 */
 
-module.exports = (name, context) => {
+module.exports = function createLogger(name) {
   switch (name) {
     case "console":
       // This is over the fence. No dependency injection here.
-      const createConsole = require("./console");
-      return createConsole(context);
+      return obj.bindAll(require("./console"), this);
     default:
       throw new Error("Invalid Logger");
   }
